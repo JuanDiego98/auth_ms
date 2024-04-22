@@ -1,0 +1,5 @@
+# Created at 2024-04-22T04:10:14.625
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Code\chaza_wallet\chaza_wallet_auth_ms\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
