@@ -2,7 +2,7 @@
 Docker commands:
 ```
 docker build -t chaza_wallet_auth_ms .
-docker run -p 8080:8080 --name chaza_wallet_auth_ms chaza_wallet_auth_ms
+docker run -p 8080:8080 -e DATASOURCE_URL=X -e DB_USER=Y -e DB_PASSWORD="Z" --name chaza_wallet_auth_ms chaza_wallet_auth_ms
 ```
 ## auth_db:
 
@@ -17,7 +17,7 @@ EXPOSE 3306
 ```
 Docker commands:
 ```
-docker build -t chaza_wallet_auth_db
+docker build -t chaza_wallet_auth_db .
 docker run -d -t -i -p 3306:3306 --name chaza_wallet_auth_db chaza_wallet_auth_db
 ```
 
