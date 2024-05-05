@@ -6,6 +6,6 @@ import io.jsonwebtoken.security.Keys;
 import javax.crypto.SecretKey;
 
 public class SecurityConstants {
-    public static final long JWT_EXPIRATION = 70000;
-    public static final SecretKey JWT_SECRET = Keys.secretKeyFor(SignatureAlgorithm.HS512);
+    public static final long JWT_EXPIRATION = 7200000;
+    public static final String JWT_SECRET = "G6qmQ3F1EIjaoafKpnw6wFvaK69MzoZVVIhk4Ex5qqSRO7fVAxnzpXW7FOi9tRIKhqFunQyMZjeuZRFxbJegGg==";
 }
