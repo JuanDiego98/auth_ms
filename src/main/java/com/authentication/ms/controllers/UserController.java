@@ -14,7 +14,6 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -47,6 +46,7 @@ public class UserController {
         UserEntity userEntity = new UserEntity();
         userEntity.setUsername(userDTO.getUsername());
         userEntity.setPassword(passwordEncoder.encode(userDTO.getPassword()));
+        userEntity.setUserId(userDTO.getUserId());
 
         userRepository.save(userEntity);
 
