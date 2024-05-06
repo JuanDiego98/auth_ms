@@ -71,13 +71,13 @@ public class UserController {
     }
 
     // Delete user
-    @DeleteMapping("/delete/{username}")
-    public ResponseEntity<String> delete(@PathVariable String username){
-        if(!userRepository.existsByUsername(username)){
+    @DeleteMapping("/delete/{userId}")
+    public ResponseEntity<String> delete(@PathVariable int userId){
+        if(!userRepository.existsByUserId(userId)){
             return new ResponseEntity<>("Error: usuario no existe", HttpStatus.BAD_REQUEST);
         }
 
-        userRepository.deleteByUsername(username);
+        userRepository.deleteByUserId(userId);
 
         return new ResponseEntity<>("Borrado exitoso", HttpStatus.OK);
     }

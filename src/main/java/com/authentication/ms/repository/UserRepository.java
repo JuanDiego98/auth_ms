@@ -9,7 +9,7 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<UserEntity, Integer> {
     UserEntity findByUsername(String username);
     Boolean existsByUsername(String username);
-
+    Boolean existsByUserId(int userId);
     @Transactional
-    void deleteByUsername(String username);
+    void deleteByUserId(int userId);
 }
